@@ -1,0 +1,16 @@
+{
+  "name" : "/IT328/pets2",
+  "authors" : [
+    {
+      "name" : "Nick Gadomskiy",
+      "email" : "ngadomskiy@greenriver.edu"
+    },
+    {
+      "name" : "Rajpreet Dhaliwal",
+      "email" : "rdhaliwal6@mail.greenriver.edu"
+    }
+  ],
+  "require" : {
+    "bcosca/fatfree-core" : "dev-master"
+  }
+}
