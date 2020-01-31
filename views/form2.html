@@ -5,6 +5,12 @@
     <title>colors</title>
 </head>
 <body>
+<select class="form-control" name="color" id="color">
+    <option>--Select a Color--</option>
+    <repeat group="{{ @colors }}" value="{{ @colorOption }}">
+        <option>{{ @colorOption }}</option>
+    </repeat>
+</select>
     <form action="results" method="post">
         Color: <select name="color">
                 <option>red</option>
