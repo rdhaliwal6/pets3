@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 // require autoload file
 require("vendor/autoload.php");
+require_once('model/validation-functions.php');
 
 // Instantiate F3
 $f3 = Base::instance();
@@ -23,7 +24,17 @@ $f3->route('GET /', function () {
     //echo $views->render("views/home.html");
 });
 
-$f3->route('GET /order', function() {
+$f3->route('GET|POST /order', function($f3) {
+    $_SESSION = array();
+    if (isset($_POST['animalName'])) {
+        $animal = $_POST['animalName'];
+//        if (validString($animal)) {
+//            $_SESSION['animal'] = $animal;
+//            $f3 -> reroute('/order2');
+//        } else {
+//            $f3 -> set("errors['animal']", "Please enter an animal");
+//        }
+    }
     $view = new Template();
     echo $view->render('views/form1.html');
 });
