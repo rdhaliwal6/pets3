@@ -12,6 +12,9 @@ require("vendor/autoload.php");
 $f3 = Base::instance();
 $f3 -> set('colors', array('pink', 'green', 'blue'));
 
+//set debug level
+$f3->set('DEBUG', 3);
+
 // Define a default route
 $f3->route('GET /', function () {
     echo "<h1> My Pets <br></h1>";
